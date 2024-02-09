@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://www.torleykatalin.hu/sitemap-index.xml
