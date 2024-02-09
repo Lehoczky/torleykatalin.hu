@@ -1,0 +1,19 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro"
+import AboutMeSection from "../components/AboutMeSection.astro"
+import HeroSection from "../components/HeroSection.astro"
+import QuoteSection from "../components/QuoteSection.astro"
+import FaqSection from "../components/FaqSection.astro"
+import Header from "../components/Header.astro"
+---
+
+<SiteLayout>
+  <Header />
+
+  <main class="relative text-xl">
+    <HeroSection />
+    <QuoteSection />
+    <AboutMeSection />
+    <FaqSection />
+  </main>
+</SiteLayout>
