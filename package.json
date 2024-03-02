@@ -11,17 +11,17 @@
     "lint": "prettier --check . --ignore-unknown"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.1",
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/check": "^0.5.6",
+    "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.3.5",
+    "astro": "^4.4.9",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.7.4",
-    "@iconify-json/simple-icons": "^1.1.90",
-    "@lehoczky/prettier-config": "^1.1.1",
+    "@iconify-json/simple-icons": "^1.1.93",
+    "@lehoczky/prettier-config": "^1.1.2",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
