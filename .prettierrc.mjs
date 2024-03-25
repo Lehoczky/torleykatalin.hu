@@ -4,7 +4,7 @@ import config from "@lehoczky/prettier-config"
 export default {
   ...config,
   plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-  tailwindConfig: './tailwind.config.ts',
+  tailwindConfig: "./tailwind.config.ts",
   overrides: [
     {
       files: "*.astro",

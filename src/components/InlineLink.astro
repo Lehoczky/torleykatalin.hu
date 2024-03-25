@@ -8,10 +8,7 @@ const { class: className, target = "_blank", ...attrs } = Astro.props
 ---
 
 <a
-  class={cn(
-    "underline-offset-2 hover:underline",
-    className
-  )}
+  class={cn("underline-offset-2 hover:underline", className)}
   target={target}
   {...attrs}
 >
