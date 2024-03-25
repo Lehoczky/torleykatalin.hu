@@ -2,10 +2,16 @@
 import Meta from "../components/head/Meta.astro"
 import JsonLD from "../components/head/JsonLD.astro"
 import Footer from "../components/footer/Footer.astro"
+
+interface Props {
+  lang?: string
+}
+
+const { lang = "hu" } = Astro.props
 ---
 
 <!doctype html>
-<html lang="hu" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <title>Törley Katalin hivatalos oldala</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
