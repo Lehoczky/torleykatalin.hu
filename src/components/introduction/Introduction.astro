@@ -1,0 +1,31 @@
+---
+import ButtonLink from "../ButtonLink.astro"
+import { Picture } from "astro:assets"
+import portrait from "@/images/portrait.png"
+---
+
+<section class="container mb-20 mt-12">
+  <div class="mb-6 flex items-center justify-between">
+    <div class="max-w-[602px] space-y-6 text-justify">
+      <p>
+        Törley Katalin vagyok, tanár. 23 évig tanítottam, amíg 2022-ben kirúgtak
+        a polgári engedetlenségi mozgalomban való részvételem miatt.
+        Társalapítója vagyok a Tanítanék Mozgalomnak, amely az elmúlt évtized
+        legnagyobb hatású civil szervezetévé nőtte ki magát.
+      </p>
+      <p>
+        2024-ben nagy fába vágtuk a fejszénket: elindulunk az európai parlamenti
+        választásokon. Európai szintre visszük a magyar gyermekek, szülők és
+        pedagógusok ügyét, hogy innen kényszerítsük párbeszédre a kormányzatot.
+        Támogasd te is az ügyünket, csatlakozz a kampányhoz! Gyermekeink jövője
+        a tét.
+      </p>
+    </div>
+
+    <div class="shrink-0">
+      <Picture src={portrait} formats={["avif", "webp"]} alt="" />
+    </div>
+  </div>
+
+  <ButtonLink href="/rolam">Tudj meg többet rólam</ButtonLink>
+</section>

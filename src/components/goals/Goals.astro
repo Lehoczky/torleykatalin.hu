@@ -1,0 +1,30 @@
+---
+import student from "@/images/student.png"
+import teacher from "@/images/teacher.png"
+import family from "@/images/family.png"
+import GoalList from "./GoalList.astro"
+import GoalListItem from "./GoalListItem.astro"
+import SectionTitle from "@/components/SectionTitle.astro"
+import { SECTION_ID } from "@/constants"
+---
+
+<section class="container py-10">
+  <SectionTitle id={SECTION_ID.goals} class="mb-12">Ügyeim</SectionTitle>
+
+  <GoalList>
+    <GoalListItem image={student} heading="Gyermekjogok">
+      Szabad, modern, személyre szabott oktatási rendszert, ahol minden gyerek
+      kibontatkoztathatja a benne rejlő tehetséget!
+    </GoalListItem>
+
+    <GoalListItem image={teacher} heading="Pedagógus érdekképviselet">
+      Méltó munkakörülményeket a pedagógusoknak! Diplomás átlagbért,
+      megbecsülést, szakmai autonómiát!
+    </GoalListItem>
+
+    <GoalListItem image={family} heading="Szülői érdekképviselet">
+      Ne kelljen a szülőknek, és a leendő szülőknek azon szorongani, hogy
+      képesek lesznek-e minőségi oktatást adni gyermekeiknek!
+    </GoalListItem>
+  </GoalList>
+</section>

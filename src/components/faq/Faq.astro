@@ -1,0 +1,80 @@
+---
+import Accordion from "@/components/accordion/Accordion.astro"
+import AccordionItem from "@/components/accordion/AccordionItem.astro"
+import SectionTitle from "@/components/SectionTitle.astro"
+---
+
+<section class="container py-20 text-center">
+  <SectionTitle class="mb-12">Gyakori kérdések</SectionTitle>
+
+  <Accordion>
+    <AccordionItem index={0} summary="Hogyan lehet támogatni a kampányt?">
+      A kampány alapját adjak a magánszemélyek adományai, csak így van esélyünk
+      nyerni! Amennyiben szeretnél adományozni, kattints ide!
+    </AccordionItem>
+    <AccordionItem index={1} summary="Hogyan csatlakozhatok a kampányhoz?">
+      Nagy szükség lesz aktivistákra a kampány során, akik segítenek események
+      szervezésében. Kattints ide, ha jelentkeznél önkéntesnek! Akkor is
+      számítunk rád, ha csak online tudnál segíteni - ilyen feladatokból is sok
+      van.
+    </AccordionItem>
+    <AccordionItem index={2} summary="Mi az a Tanítanék Mozgalom?">
+      A Tanítanék Mozgalom 2016-ban indult el a miskolci Herman Ottó Gimnázium
+      nevelőtestülete által publikált, a közoktatás válságáról szóló nyílt levél
+      eredményeként. Azóta már számos tömegrendezvényt szerveztünk, illetve
+      belekeztünk egy országos hálózat építésébe is. 2022 tavaszán felkaroltuk a
+      polgári engedetlenségi mozgalmat, amely során 400 iskola és 8000 tanár
+      vett részt a pedagógusok sztrájkjogának ellehetetlenítése miatt.
+    </AccordionItem>
+    <AccordionItem index={3} summary="Hogyan szavazhatsz rám?">
+      A magyarországi EP választás az önkormányzati választásokkal egy időben,
+      június 9-én lesz. A szavazólapon szavazz a Magyar Kétfarkú Kutyapárt
+      listájára!
+    </AccordionItem>
+    <AccordionItem
+      index={4}
+      summary="Mit lehet tenni a magyarországi oktatásért az Európai Parlamentből?"
+    >
+      A képviselői hely lehetőséget ad arra, hogy folyamatosan napirenden
+      tartsuk ráadásul egy nagyobb színtéren a magyarországi diákok,
+      pedagógusok, és szülők ügyét. Ezen kívül az oktatáshoz szorosan kapcsolódó
+      témákkal is fogunk foglalkozni,mint a gyermekjogok, az emberi jogok,
+      munkavállalói jogok, a közszolgálatiság helyzete, romák helyzete, a
+      szegregáció problémája. Ezeken keresztül lehet hatást kifejteni a
+      magyarországi oktatásra is.
+    </AccordionItem>
+    <AccordionItem
+      index={5}
+      summary="Miért a Magyar Kétfarkú Kutyapárttal indul a Tanítanék?"
+    >
+      A Magyar Kétfarkú Kutyapárt az egyetlen mozgalmi háttérrel rendelkező,
+      civil ügyeket felkaroló párt jelenleg az országban, ezért képzelhető a két
+      szervezet közötti együttműködés.
+    </AccordionItem>
+    <AccordionItem
+      index={6}
+      summary="Nem veszíti el a Tanítanék így a civil jellegét?"
+    >
+      Az oktatásért való küzdelem alapvetően politikai. Az EP képviselőség egy
+      új szintre emeli a Tanítanék Mozgalom, és a többi oktatási szervezet
+      munkáját. A Tanítanék megalakulása óta használ az adott körülményeknek
+      megfelelően különböző, sokszor formabontó eszközöket - ennek egy következő
+      lépése az európai parlamenti kampány.
+    </AccordionItem>
+    <AccordionItem index={7} summary="Mi a terv, miután képviselő leszek?">
+      EP-képviselőként továbbra is elsősorban a magyarországi közoktatás ügyét,
+      többszázezer magyar gyerek és pedagógus ügyét fogom képviselni. Az időmet
+      megosztom majd a brüsszeli, illetve az itthoni teendők között, ugyanúgy
+      fogom folytatni a Tanítanékos munkámat is.
+    </AccordionItem>
+    <AccordionItem
+      index={8}
+      summary="A Tanítanékhoz beérkezett adományok a kampányra is mennek?"
+    >
+      A Tanítanék Mozgalom a több tízezer adományozójának köszönhetően működik
+      fenntarthatóan. Természetesen a szervezetnek beérkezett összeget nem
+      fordítjuk a kampányra, azok továbbra is a Mozgalom épülését, a szervezett
+      programok megvalósulását fogják segíteni.
+    </AccordionItem>
+  </Accordion>
+</section>

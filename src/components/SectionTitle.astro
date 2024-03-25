@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from "astro/types"
+import { cn } from "@/utils"
+
+export interface Props extends HTMLAttributes<"h2"> {
+  color?: "primary" | "white"
+}
+
+const { class: className, color = "primary", ...attrs } = Astro.props
+---
+
+<h2
+  class={cn("font-bold text-4xl text-center scroll-m-28", className, {
+    "text-primary": color === "primary",
+    "text-white": color === "white",
+  })}
+  {...attrs}
+>
+  <slot />
+</h2>

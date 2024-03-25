@@ -1,0 +1,22 @@
+<div class="accordion">
+  <slot />
+</div>
+
+<script>
+  const accordionButtons = document.querySelectorAll(".accordion button")
+  for (const button of accordionButtons) {
+    button.addEventListener("click", () => {
+      const isExpanded = button.getAttribute("aria-expanded") === "true"
+      const toExpand = !isExpanded
+      const sectionId = button.getAttribute("aria-controls")!
+      const section = document.getElementById(sectionId)!
+
+      button.setAttribute("aria-expanded", toExpand ? "true" : "false")
+      if (toExpand) {
+        section.classList.add("open")
+      } else {
+        section.classList.remove("open")
+      }
+    })
+  }
+</script>

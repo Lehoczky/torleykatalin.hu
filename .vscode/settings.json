@@ -8,5 +8,5 @@
     "source.fixAll.markdownlint": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
-  "cSpell.words": ["astro", "astrojs", "iconify"]
+  "cSpell.words": ["astro", "astrojs", "clsx", "iconify"]
 }

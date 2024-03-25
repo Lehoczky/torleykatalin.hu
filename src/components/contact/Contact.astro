@@ -1,0 +1,71 @@
+---
+import bgContact from "@/images/bg-contact.png"
+import ContactPlatform from "./ContactPlatform.astro"
+import IconFacebook from "@/components/icons/Facebook.astro"
+import IconEmail from "@/components/icons/Email.astro"
+import IconInstagram from "@/components/icons/Instagram.astro"
+import IconTikTok from "@/components/icons/TikTok.astro"
+import IconYoutube from "@/components/icons/Youtube.astro"
+import InlineLink from "@/components/InlineLink.astro"
+import SectionTitle from "@/components/SectionTitle.astro"
+import { SECTION_ID } from "@/constants"
+---
+
+<section class="relative py-11 text-white">
+  <div class="container flex flex-col gap-12 text-center">
+    <SectionTitle id={SECTION_ID.contact} color="white" class="mb-12"
+      >Kapcsolat</SectionTitle
+    >
+
+    <ul class="flex justify-between">
+      <li>
+        <ContactPlatform href="https://www.facebook.com/torley.kata/">
+          <IconFacebook slot="icon" class="size-24" />
+          <span slot="text">Facebook</span>
+        </ContactPlatform>
+      </li>
+      <li>
+        <ContactPlatform href="https://www.instagram.com/torley.kata/">
+          <IconInstagram slot="icon" class="size-24" />
+          <span slot="text">Instagram</span>
+        </ContactPlatform>
+      </li>
+      <li>
+        <ContactPlatform
+          href="https://www.youtube.com/channel/UCuUyrk5t4nzx6htil1hXgrQ"
+        >
+          <IconYoutube slot="icon" class="size-24" />
+          <span slot="text">Youtube</span>
+        </ContactPlatform>
+      </li>
+      <li>
+        <ContactPlatform
+          href="https://www.tiktok.com/@trley.kata?_t=8jcwuqQpQg4&_r=1"
+        >
+          <IconTikTok slot="icon" class="size-24" />
+          <span slot="text">TikTok</span>
+        </ContactPlatform>
+      </li>
+      <li>
+        <ContactPlatform
+          href="https://actionnetwork.org/forms/csatlakozz-a-torley-kampanyhoz-3"
+        >
+          <IconEmail slot="icon" class="size-24" />
+          <span slot="text">Hírlevél</span>
+        </ContactPlatform>
+      </li>
+    </ul>
+
+    <div class="text-2xl">
+      Sajtó megkereséseket az <InlineLink href="mailto:info@torleykatalin.hu"
+        >info@torleykatalin.hu</InlineLink
+      > címre várunk.
+    </div>
+  </div>
+
+  <img
+    src={bgContact.src}
+    alt=""
+    class="absolute inset-0 -z-10 h-full w-full object-cover"
+  />
+</section>

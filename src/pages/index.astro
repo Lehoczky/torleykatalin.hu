@@ -1,19 +1,32 @@
 ---
-import SiteLayout from "../layouts/SiteLayout.astro"
-import AboutMeSection from "../components/AboutMeSection.astro"
-import HeroSection from "../components/HeroSection.astro"
-import QuoteSection from "../components/QuoteSection.astro"
-import FaqSection from "../components/FaqSection.astro"
-import Header from "../components/Header.astro"
+import SiteLayout from "@/layouts/SiteLayout.astro"
+import Contact from "@/components/contact/Contact.astro"
+import Faq from "@/components/faq/Faq.astro"
+import { Picture } from "astro:assets"
+import crowd from "@/images/crowd.png"
+import Accomplishments from "@/components/accomplishments/Accomplishments.astro"
+import Goals from "@/components/goals/Goals.astro"
+import Support from "@/components/support/Support.astro"
+import Introduction from "@/components/introduction/Introduction.astro"
+import Nav from "@/components/nav/Nav.astro"
+import Hero from "@/components/hero/Hero.astro"
 ---
 
 <SiteLayout>
-  <Header />
-
-  <main class="relative text-xl">
-    <HeroSection />
-    <QuoteSection />
-    <AboutMeSection />
-    <FaqSection />
-  </main>
+  <Hero />
+  <Nav />
+  <Introduction />
+  <Support />
+  <Goals />
+  <Accomplishments />
+  <div class="flex justify-center">
+    <Picture
+      class="h-[420px] w-full overflow-hidden rounded-md object-cover"
+      src={crowd}
+      formats={["avif", "webp"]}
+      alt="Törley Katalin a Tanítanék mozgalom tüntetésén"
+    />
+  </div>
+  <Faq />
+  <Contact />
 </SiteLayout>

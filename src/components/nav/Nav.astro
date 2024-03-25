@@ -1,0 +1,23 @@
+---
+import { SECTION_ID } from "@/constants"
+import NavLink from "./NavLink.astro"
+---
+
+<nav class="sticky top-0 z-40 bg-primary text-white shadow">
+  <ul
+    class="container flex justify-between py-7 text-3xl font-semibold uppercase"
+  >
+    <li>
+      <NavLink href={`#${SECTION_ID.support}`}>Támogass</NavLink>
+    </li>
+    <li>
+      <NavLink href={`#${SECTION_ID.goals}`}>Ügyek</NavLink>
+    </li>
+    <li>
+      <NavLink href={`#${SECTION_ID.contact}`}>Kapcsolat</NavLink>
+    </li>
+    <li>
+      <NavLink href="/en">English</NavLink>
+    </li>
+  </ul>
+</nav>
