@@ -10,8 +10,8 @@ const { class: className, target = "_blank", ...attrs } = Astro.props
 
 <a
   class={cn(
-    "flex flex-col group gap-6 text-center transition duration-200",
-    className,
+    "grid place-items-center group gap-6 text-center transition duration-200",
+    className
   )}
   target={target}
   {...attrs}

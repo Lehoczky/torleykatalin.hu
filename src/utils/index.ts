@@ -6,5 +6,6 @@ export function cn(...inputs: ClassValue[]): string {
 }
 
 export function withBase(link: string): string {
-  return import.meta.env.BASE_URL + "/" + link
+  const linkPrefixed = import.meta.env.BASE_URL + "/" + link
+  return linkPrefixed.replaceAll("//", "/")
 }

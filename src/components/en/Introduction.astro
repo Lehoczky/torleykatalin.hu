@@ -1,0 +1,44 @@
+---
+import { Picture } from "astro:assets"
+
+import portrait from "@/images/portrait.png"
+
+import ButtonLink from "../ButtonLink.astro"
+import { EXTERNAL_LINK } from "@/constants"
+---
+
+<section class="container mb-20 mt-12">
+  <div class="mb-6 flex items-center justify-between">
+    <div class="shrink-0">
+      <Picture src={portrait} formats={["avif", "webp"]} alt="" />
+    </div>
+
+    <div class="max-w-[602px] space-y-6 text-justify">
+      <p>
+        My name is Katalin Törley, and I am a teacher. I taught French language,
+        literature, and civilization for 23 years at the bilingual department of
+        Kölcsey High School. In October 2022, I was fired from my position due
+        to my participation in the civil disobedience movement.
+      </p>
+      <p>
+        In 2016, I co-founded the Teaching Movement alongside Olivér Pilz, which
+        has since grown into the most influential civil organization of the past
+        decade.
+      </p>
+      <p>
+        As a Member of the European Parliament, I will continue to primarily
+        advocate for the Hungarian public education system, representing the
+        interests of Hungarian children, parents, prospective parents,
+        educational workers, and teachers. The education system is intertwined
+        with various other areas and issues, so these will also be important
+        topics for me (children's rights, human rights, labor rights, public
+        service, the situation of the Roma, segregation).
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center">
+    <ButtonLink href={EXTERNAL_LINK.joinCampaign}>Join the campaign!</ButtonLink
+    >
+  </div>
+</section>

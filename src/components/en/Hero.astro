@@ -1,10 +1,8 @@
 ---
-import ButtonLink from "@/components/ButtonLink.astro"
 import IconFacebook from "@/components/icons/Facebook.astro"
 import IconInstagram from "@/components/icons/Instagram.astro"
 import IconTanitanek from "@/components/icons/Tanitanek.astro"
 import IconTikTok from "@/components/icons/TikTok.astro"
-import { EXTERNAL_LINK } from "@/constants"
 import bgHero from "@/images/bg-hero.png"
 import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
 ---
@@ -15,39 +13,35 @@ import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
       <h1
         class="mb-12 rotate-hero-text transform text-8xl font-bold uppercase italic"
       >
-        Törley Katalin
+        Katalin Törley
       </h1>
 
       <div
         class="mb-14 rotate-hero-text transform text-2xl font-semibold italic"
       >
-        A Tanítanék Mozgalom és a Magyar Kétfarkú Kutyapárt közös európai
-        parlamenti képviselőjelöltje
+        Joint candidate of the Tanítanék Movement and the Hungarian Two-Tailed
+        Dog Party for the European Parliament
       </div>
-
-      <ButtonLink href={EXTERNAL_LINK.joinCampaign}>
-        Csatlakozz a kampányhoz!
-      </ButtonLink>
     </div>
   </div>
 
   <div class="absolute right-14 top-5 flex gap-7">
     <a
-      href={EXTERNAL_LINK.facebook}
+      href="https://www.facebook.com/torley.kata/"
       class="transition duration-200 hover:scale-105"
       aria-label="Facebook"
     >
       <IconFacebook class="size-16" />
     </a>
     <a
-      href={EXTERNAL_LINK.tikTok}
+      href="https://www.tiktok.com/@trley.kata?_t=8jcwuqQpQg4&_r=1"
       class="transition duration-200 hover:scale-105"
       aria-label="TikTok"
     >
       <IconTikTok class="size-16" />
     </a>
     <a
-      href={EXTERNAL_LINK.instagram}
+      href="https://www.instagram.com/torley.kata/"
       class="transition duration-200 hover:scale-105"
       aria-label="Instagram"
     >

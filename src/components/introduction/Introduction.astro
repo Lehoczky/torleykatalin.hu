@@ -4,6 +4,7 @@ import { Picture } from "astro:assets"
 import portrait from "@/images/portrait.png"
 
 import ButtonLink from "../ButtonLink.astro"
+import { withBase } from "@/utils"
 ---
 
 <section class="container mb-20 mt-12">
@@ -29,5 +30,7 @@ import ButtonLink from "../ButtonLink.astro"
     </div>
   </div>
 
-  <ButtonLink href="/rolam">Tudj meg többet rólam</ButtonLink>
+  <ButtonLink href={withBase("/rolam")} target="_self"
+    >Tudj meg többet rólam</ButtonLink
+  >
 </section>
