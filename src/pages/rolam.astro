@@ -1,7 +1,62 @@
 ---
+import { Picture } from "astro:assets"
+
+import portrait from "@/images/portrait.png"
 import SiteLayout from "../layouts/SiteLayout.astro"
+import ButtonLink from "@/components/ButtonLink.astro"
+import Hero from "@/components/hero/Hero.astro"
+import Nav from "@/components/nav/Nav.astro"
+import Footer from "@/components/footer/Footer.astro"
+import Contact from "@/components/contact/Contact.astro"
+import { EXTERNAL_LINK } from "@/constants"
 ---
 
 <SiteLayout>
-  <!--  -->
+  <Hero />
+  <Nav />
+  <section class="container mb-20 mt-12 flex flex-col gap-20">
+    <div class="mb-6 flex items-center justify-between">
+      <div class="shrink-0">
+        <Picture src={portrait} formats={["avif", "webp"]} alt="" />
+      </div>
+
+      <div class="max-w-[602px] space-y-6 text-justify">
+        <p>
+          Törley Katalin vagyok, tanár. 23 évig tanítottam francia nyelvet,
+          irodalmat és civilizációt a Kölcsey Gimnázium két tanítási nyelvű
+          tagozatán. Az állásomból 2022 októberében kirúgtak a polgári
+          engedetlenségi mozgalomban való részvételem miatt. 2016-ban Pilz
+          Olivér mellett alapítója voltam a Tanítanék Mozgalomnak, amely azóta
+          az elmúlt évtized legnagyobb hatású civil szervezetévé nőtte ki magát.
+        </p>
+        <p>
+          EP-képviselőként továbbra is elsősorban a magyarországi közoktatás
+          ügyét, magyar gyerekek, szülők, leendő szülők, oktatási dolgozók és
+          pedagógusok ügyét fogom képviselni. Az oktatási rendszer számos
+          szállal kapcsolódik más területekhez, és problémákhoz, így ezek is
+          fontos témáim lesznek (gyermekjogok, emberi jogok, munkavállalói
+          jogok, közszolgálatiság, romák helyzete, szegregáció).
+        </p>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <iframe
+        class="aspect-video w-4/5"
+        src="https://www.youtube.com/embed/MhCwA4TwERE?si=FM_cHqxikPlM3l0Z"
+        title="Törley Katalin bemutatkozó vidója"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+
+    <div class="flex justify-center">
+      <ButtonLink href={EXTERNAL_LINK.joinCampaign}>
+        Csatlakozz a kampányhoz!
+      </ButtonLink>
+    </div>
+  </section>
+  <Contact />
+  <Footer />
 </SiteLayout>
