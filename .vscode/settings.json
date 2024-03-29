@@ -8,5 +8,6 @@
     "source.fixAll.markdownlint": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
-  "cSpell.words": ["astro", "astrojs", "clsx", "iconify"]
+  "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript"],
+  "cSpell.words": ["astro", "astrojs", "clsx", "iconify", "tseslint"]
 }
