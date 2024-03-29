@@ -10,13 +10,13 @@ import NavLink from "./NavLink.astro"
     class="container flex justify-between py-7 text-3xl font-semibold uppercase"
   >
     <li>
-      <NavLink href={`#${SECTION_ID.support}`}>Támogass</NavLink>
+      <NavLink href={withBase(`/#${SECTION_ID.support}`)}>Támogass</NavLink>
     </li>
     <li>
-      <NavLink href={`#${SECTION_ID.goals}`}>Ügyek</NavLink>
+      <NavLink href={withBase(`/#${SECTION_ID.goals}`)}>Ügyek</NavLink>
     </li>
     <li>
-      <NavLink href={`#${SECTION_ID.contact}`}>Kapcsolat</NavLink>
+      <NavLink href={withBase(`/#${SECTION_ID.goals}`)}>Kapcsolat</NavLink>
     </li>
     <li>
       <NavLink href={withBase("/en")}>English</NavLink>

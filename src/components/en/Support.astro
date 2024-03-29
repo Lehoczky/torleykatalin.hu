@@ -1,4 +1,5 @@
 ---
+import { EXTERNAL_LINK } from "@/constants"
 import ButtonLink from "../ButtonLink.astro"
 ---
 
@@ -10,11 +11,7 @@ import ButtonLink from "../ButtonLink.astro"
         can only count on you!
       </div>
 
-      <ButtonLink
-        href="https://actionnetwork.org/fundraising/tamogasd-a-kampanyomat-2"
-      >
-        Donate
-      </ButtonLink>
+      <ButtonLink href={EXTERNAL_LINK.donate}> Donate </ButtonLink>
     </div>
   </div>
 </section>

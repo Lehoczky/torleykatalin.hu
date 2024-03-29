@@ -1,39 +1,44 @@
 ---
 import Tanitanek from "@/components/icons/Tanitanek.astro"
-import { SECTION_ID } from "@/constants"
+import { EMAIL_ADDRESS, EXTERNAL_LINK, SECTION_ID } from "@/constants"
 import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
 
 import InlineLink from "../InlineLink.astro"
+import { withBase } from "@/utils"
 ---
 
 <footer class="bg-secondary-dark pb-14 pt-8 text-white">
   <div class="container flex gap-2">
     <div class="grid flex-1 grid-cols-2 place-content-center">
       <div>
-        <InlineLink href="/rolam">Rólam</InlineLink>
+        <InlineLink href={withBase("/rolam")}>Rólam</InlineLink>
       </div>
       <div>
-        <InlineLink href={`#${SECTION_ID.goals}`}
+        <InlineLink href={withBase(`/#${SECTION_ID.goals}`)}
           >Ügyek és eredmények</InlineLink
         >
       </div>
       <div>
-        <InlineLink href="#">Csatlakozz</InlineLink>
+        <InlineLink href={EXTERNAL_LINK.joinCampaign}>Csatlakozz</InlineLink>
       </div>
       <div>
-        <InlineLink href="#">Gyakori kérdések</InlineLink>
+        <InlineLink href={withBase(`/#${SECTION_ID.faq}`)}
+          >Gyakori kérdések</InlineLink
+        >
       </div>
       <div>
-        <InlineLink href="#">Támogass</InlineLink>
+        <InlineLink href={withBase(`/#${SECTION_ID.support}`)}
+          >Támogass</InlineLink
+        >
       </div>
       <div>
-        <InlineLink href="/en">English</InlineLink>
+        <InlineLink href={withBase("/en")}>English</InlineLink>
       </div>
     </div>
 
     <div class="flex flex-col gap-4 border-l border-l-white py-2 pl-7">
       <InlineLink
-        href="#"
+        href={EXTERNAL_LINK.tanitanek}
         class="flex items-center gap-5 text-3xl font-extrabold"
       >
         <Tanitanek class="size-10" />
@@ -41,7 +46,7 @@ import InlineLink from "../InlineLink.astro"
       </InlineLink>
 
       <InlineLink
-        href="#"
+        href={EXTERNAL_LINK.mkkp}
         class="flex items-center gap-5 text-[28px] font-semibold"
       >
         <img src={mkkpEpLogo.src} alt="" width={40} height={40} />
@@ -49,10 +54,10 @@ import InlineLink from "../InlineLink.astro"
       </InlineLink>
 
       <InlineLink
-        href="mailto:info@torleykatalin.hu"
+        href={`mailto:${EMAIL_ADDRESS}`}
         class="ml-[3.75rem] flex items-center"
       >
-        <span>info@torleykatalin.hu</span>
+        <span>{EMAIL_ADDRESS}</span>
       </InlineLink>
     </div>
   </div>

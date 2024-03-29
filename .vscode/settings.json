@@ -9,5 +9,13 @@
     "source.fixAll.stylelint": "explicit"
   },
   "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript"],
-  "cSpell.words": ["astro", "astrojs", "clsx", "iconify", "tseslint"]
+  "cSpell.words": [
+    "astro",
+    "astrojs",
+    "clsx",
+    "iconify",
+    "mkkp",
+    "tanitanek",
+    "tseslint"
+  ]
 }

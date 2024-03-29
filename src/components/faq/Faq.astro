@@ -2,10 +2,12 @@
 import Accordion from "@/components/accordion/Accordion.astro"
 import AccordionItem from "@/components/accordion/AccordionItem.astro"
 import SectionTitle from "@/components/SectionTitle.astro"
+import { SECTION_ID } from "@/constants"
 ---
 
 <section class="container py-20 text-center">
-  <SectionTitle class="mb-12">Gyakori kérdések</SectionTitle>
+  <SectionTitle id={SECTION_ID.faq} class="mb-12">Gyakori kérdések</SectionTitle
+  >
 
   <Accordion>
     <AccordionItem index={0} summary="Hogyan lehet támogatni a kampányt?">

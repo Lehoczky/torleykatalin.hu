@@ -1,7 +1,7 @@
 ---
 import { Picture } from "astro:assets"
 
-import { SECTION_ID } from "@/constants"
+import { EXTERNAL_LINK, SECTION_ID } from "@/constants"
 import bgSupport from "@/images/bg-support.png"
 
 import ButtonLink from "../ButtonLink.astro"
@@ -33,11 +33,7 @@ import ButtonLink from "../ButtonLink.astro"
         csak rád számíthatunk!
       </div>
 
-      <ButtonLink
-        href="https://actionnetwork.org/fundraising/tamogasd-a-kampanyomat-2"
-      >
-        Adományozok
-      </ButtonLink>
+      <ButtonLink href={EXTERNAL_LINK.donate}>Adományozok</ButtonLink>
     </div>
   </div>
 </section>

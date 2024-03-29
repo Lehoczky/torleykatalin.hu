@@ -1,11 +1,11 @@
 ---
 import type { HTMLAttributes } from "astro/types"
 
-import { cn } from "@/utils"
+import { anchorAttributes, cn } from "@/utils"
 
 export interface Props extends HTMLAttributes<"a"> {}
 
-const { class: className, target = "_blank", ...attrs } = Astro.props
+const { class: className, ...attrs } = Astro.props
 ---
 
 <a
@@ -13,8 +13,7 @@ const { class: className, target = "_blank", ...attrs } = Astro.props
     "grid place-items-center group gap-6 text-center transition duration-200",
     className
   )}
-  target={target}
-  {...attrs}
+  {...anchorAttributes(attrs)}
 >
   <div class="transition duration-200 group-hover:scale-105">
     <slot name="icon" />
