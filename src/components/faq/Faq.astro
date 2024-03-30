@@ -2,7 +2,8 @@
 import Accordion from "@/components/accordion/Accordion.astro"
 import AccordionItem from "@/components/accordion/AccordionItem.astro"
 import SectionTitle from "@/components/SectionTitle.astro"
-import { SECTION_ID } from "@/constants"
+import InlineLink from "../InlineLink.astro"
+import { EXTERNAL_LINK, SECTION_ID } from "@/constants"
 ---
 
 <section class="container py-20 text-center">
@@ -11,25 +12,29 @@ import { SECTION_ID } from "@/constants"
 
   <Accordion>
     <AccordionItem index={0} summary="Hogyan lehet támogatni a kampányt?">
-      A kampány alapját adjak a magánszemélyek adományai, csak így van esélyünk
-      nyerni! Amennyiben szeretnél adományozni, kattints ide!
+      Hogyan lehet támogatni a kampányt? A kampány alapját a magánszemélyek
+      adományai adják. Csak így, közösen van esélyünk nyerni! Amennyiben
+      szeretnél adományozni, <InlineLink href={EXTERNAL_LINK.donate}
+        >kattints ide</InlineLink
+      >!
     </AccordionItem>
     <AccordionItem index={1} summary="Hogyan csatlakozhatok a kampányhoz?">
       Nagy szükség lesz aktivistákra a kampány során, akik segítenek események
-      szervezésében. Kattints ide, ha jelentkeznél önkéntesnek! Akkor is
-      számítunk rád, ha csak online tudnál segíteni - ilyen feladatokból is sok
-      van.
+      szervezésében. <InlineLink href={EXTERNAL_LINK.joinCampaign}
+        >Kattints ide</InlineLink
+      >, ha jelentkeznél önkéntesnek! Akkor is számítunk rád, ha csak online
+      tudnál segíteni, ilyen feladatokból is sok van.
     </AccordionItem>
     <AccordionItem index={2} summary="Mi az a Tanítanék Mozgalom?">
       A Tanítanék Mozgalom 2016-ban indult el a miskolci Herman Ottó Gimnázium
       nevelőtestülete által publikált, a közoktatás válságáról szóló nyílt levél
       eredményeként. Azóta már számos tömegrendezvényt szerveztünk, illetve
-      belekeztünk egy országos hálózat építésébe is. 2022 tavaszán felkaroltuk a
-      polgári engedetlenségi mozgalmat, amely során 400 iskola és 8000 tanár
+      belekezdtünk egy országos hálózat építésébe is. 2022 tavaszán felkaroltuk
+      a polgári engedetlenségi mozgalmat, amely során 400 iskola és 8000 tanár
       vett részt a pedagógusok sztrájkjogának ellehetetlenítése miatt.
     </AccordionItem>
     <AccordionItem index={3} summary="Hogyan szavazhatsz rám?">
-      A magyarországi EP választás az önkormányzati választásokkal egy időben,
+      A magyarországi EP-választás az önkormányzati választásokkal egy időben,
       június 9-én lesz. A szavazólapon szavazz a Magyar Kétfarkú Kutyapárt
       listájára!
     </AccordionItem>
@@ -38,34 +43,37 @@ import { SECTION_ID } from "@/constants"
       summary="Mit lehet tenni a magyarországi oktatásért az Európai Parlamentből?"
     >
       A képviselői hely lehetőséget ad arra, hogy folyamatosan napirenden
-      tartsuk ráadásul egy nagyobb színtéren a magyarországi diákok,
+      tartsuk, ráadásul egy nagyobb színtéren a magyarországi diákok,
       pedagógusok, és szülők ügyét. Ezen kívül az oktatáshoz szorosan kapcsolódó
-      témákkal is fogunk foglalkozni,mint a gyermekjogok, az emberi jogok,
+      témákkal is fogunk foglalkozni, mint a gyermekjogok, az emberi jogok,
       munkavállalói jogok, a közszolgálatiság helyzete, romák helyzete, a
       szegregáció problémája. Ezeken keresztül lehet hatást kifejteni a
       magyarországi oktatásra is.
     </AccordionItem>
     <AccordionItem
       index={5}
-      summary="Miért a Magyar Kétfarkú Kutyapárttal indul a Tanítanék?"
+      summary="Miért a Magyar Kétfarkú Kutya Párt listáján indulok?"
     >
       A Magyar Kétfarkú Kutyapárt az egyetlen mozgalmi háttérrel rendelkező,
-      civil ügyeket felkaroló párt jelenleg az országban, ezért képzelhető a két
-      szervezet közötti együttműködés.
+      civil ügyeket felkaroló párt jelenleg az országban, ezért kötöttünk
+      szövetséget
     </AccordionItem>
     <AccordionItem
       index={6}
       summary="Nem veszíti el a Tanítanék így a civil jellegét?"
     >
-      Az oktatásért való küzdelem alapvetően politikai. Az EP képviselőség egy
+      Az oktatásért való küzdelem alapvetően politikai. Az EP-képviselőség egy
       új szintre emeli a Tanítanék Mozgalom, és a többi oktatási szervezet
       munkáját. A Tanítanék megalakulása óta használ az adott körülményeknek
-      megfelelően különböző, sokszor formabontó eszközöket - ennek egy következő
+      megfelelően különböző, sokszor formabontó eszközöket. Ennek egy következő
       lépése az európai parlamenti kampány.
     </AccordionItem>
-    <AccordionItem index={7} summary="Mi a terv, miután képviselő leszek?">
+    <AccordionItem
+      index={7}
+      summary="Mit fogok tenni, miután képviselő leszek?"
+    >
       EP-képviselőként továbbra is elsősorban a magyarországi közoktatás ügyét,
-      többszázezer magyar gyerek és pedagógus ügyét fogom képviselni. Az időmet
+      több százezer magyar gyerek és pedagógus ügyét fogom képviselni. Az időmet
       megosztom majd a brüsszeli, illetve az itthoni teendők között, ugyanúgy
       fogom folytatni a Tanítanékos munkámat is.
     </AccordionItem>
