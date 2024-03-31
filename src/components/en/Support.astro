@@ -5,13 +5,15 @@ import ButtonLink from "../ButtonLink.astro"
 
 <section class="support-bg-gradient">
   <div class="container">
-    <div class="flex justify-between px-8 py-9">
+    <div
+      class="flex items-center justify-between gap-6 px-8 py-9 md:flex-col md:text-center"
+    >
       <div class="max-w-xl">
         We don't have billionaire donors, we don't get government subsidies - we
         can only count on you!
       </div>
 
-      <ButtonLink href={EXTERNAL_LINK.donate}> Donate </ButtonLink>
+      <ButtonLink href={EXTERNAL_LINK.donate}>Donate</ButtonLink>
     </div>
   </div>
 </section>

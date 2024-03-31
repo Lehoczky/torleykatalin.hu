@@ -8,12 +8,12 @@ import { EXTERNAL_LINK } from "@/constants"
 ---
 
 <section class="container mb-20 mt-12">
-  <div class="mb-6 flex items-center justify-between">
-    <div class="shrink-0">
-      <Picture src={portrait} formats={["avif", "webp"]} alt="" />
-    </div>
-
-    <div class="max-w-[602px] space-y-6 text-justify">
+  <div
+    class="mb-8 flex items-center justify-between gap-20 xl:gap-14 md:flex-col"
+  >
+    <div
+      class="max-w-[602px] space-y-6 text-justify 2xl:max-w-none md:text-left"
+    >
       <p>
         My name is Katalin Törley, and I am a teacher. I taught French language,
         literature, and civilization for 23 years at the bilingual department of
@@ -34,6 +34,10 @@ import { EXTERNAL_LINK } from "@/constants"
         topics for me (children's rights, human rights, labor rights, public
         service, the situation of the Roma, segregation).
       </p>
+    </div>
+
+    <div class="shrink-0 lg:size-64 md:size-max">
+      <Picture src={portrait} formats={["avif", "webp"]} alt="" />
     </div>
   </div>
 

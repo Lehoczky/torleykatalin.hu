@@ -7,10 +7,9 @@ import IconYoutube from "@/components/icons/Youtube.astro"
 import InlineLink from "@/components/InlineLink.astro"
 import SectionTitle from "@/components/SectionTitle.astro"
 import { EMAIL_ADDRESS, EXTERNAL_LINK, SECTION_ID } from "@/constants"
-import bgContact from "@/images/bg-contact.png"
-import bgContactSm from "@/images/bg-contact-sm.png"
-
+import ContactGrid from "./ContactGrid.astro"
 import ContactPlatform from "./ContactPlatform.astro"
+import ContactBackground from "./ContactBackground.astro"
 ---
 
 <section class="relative isolate bg-primary py-11 text-white">
@@ -19,38 +18,38 @@ import ContactPlatform from "./ContactPlatform.astro"
       >Kapcsolat</SectionTitle
     >
 
-    <ul class="flex flex-wrap items-center justify-center gap-y-12">
-      <li class="w-1/5 lg:w-1/3 sm:w-full">
+    <ContactGrid>
+      <li>
         <ContactPlatform href={EXTERNAL_LINK.facebook}>
           <IconFacebook slot="icon" />
           <span slot="text">Facebook</span>
         </ContactPlatform>
       </li>
-      <li class="w-1/5 lg:w-1/3 sm:w-full">
+      <li>
         <ContactPlatform href={EXTERNAL_LINK.instagram}>
           <IconInstagram slot="icon" />
           <span slot="text">Instagram</span>
         </ContactPlatform>
       </li>
-      <li class="w-1/5 lg:w-1/3 sm:w-full">
+      <li>
         <ContactPlatform href={EXTERNAL_LINK.youtube}>
           <IconYoutube slot="icon" />
           <span slot="text">Youtube</span>
         </ContactPlatform>
       </li>
-      <li class="w-1/5 lg:w-1/3 sm:w-full">
+      <li>
         <ContactPlatform href={EXTERNAL_LINK.tikTok}>
           <IconTikTok slot="icon" />
           <span slot="text">TikTok</span>
         </ContactPlatform>
       </li>
-      <li class="w-1/5 lg:w-1/3 sm:w-full">
+      <li>
         <ContactPlatform href={EXTERNAL_LINK.newsletter}>
           <IconEmail slot="icon" />
           <span slot="text">Hírlevél</span>
         </ContactPlatform>
       </li>
-    </ul>
+    </ContactGrid>
 
     <div class="text-2xl">
       A sajtó megkereséseit az <InlineLink href={`mailto:${EMAIL_ADDRESS}`}
@@ -59,15 +58,5 @@ import ContactPlatform from "./ContactPlatform.astro"
     </div>
   </div>
 
-  <img
-    src={bgContact.src}
-    alt=""
-    class="absolute inset-0 -z-10 h-full w-full object-cover md:hidden"
-  />
-
-  <img
-    src={bgContactSm.src}
-    alt=""
-    class="absolute inset-0 -z-10 hidden h-full w-full object-cover md:block"
-  />
+  <ContactBackground />
 </section>

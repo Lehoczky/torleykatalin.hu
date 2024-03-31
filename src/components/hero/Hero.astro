@@ -1,31 +1,23 @@
 ---
 import ButtonLink from "@/components/ButtonLink.astro"
-import IconFacebook from "@/components/icons/Facebook.astro"
-import IconInstagram from "@/components/icons/Instagram.astro"
-import IconTanitanek from "@/components/icons/Tanitanek.astro"
-import IconTikTok from "@/components/icons/TikTok.astro"
 import { EXTERNAL_LINK } from "@/constants"
-import bgHero from "@/images/bg-hero.png"
-import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
-import IconLink from "@/components/IconLink.astro"
+import HeroSocials from "./HeroSocials.astro"
+import HeroPartyLogos from "./HeroPartyLogos.astro"
+import HeroHeading from "./HeroHeading.astro"
+import HeroSubtitle from "./HeroSubtitle.astro"
+import HeroBackground from "./HeroBackground.astro"
 ---
 
 <section>
   <div class="relative text-white">
     <div class="container absolute bottom-24 left-0 right-0 xl:bottom-12">
       <div class="w-[26rem] lg:w-[24rem] sm:w-full sm:text-center">
-        <h1
-          class="mb-12 rotate-hero-text transform text-8xl font-bold uppercase italic xl:mb-10 xl:text-7xl lg:text-4xl"
-        >
-          Törley Katalin
-        </h1>
+        <HeroHeading>Törley Katalin</HeroHeading>
 
-        <div
-          class="mb-14 rotate-hero-text transform text-2xl font-semibold italic xl:mb-10 lg:text-xl sm:hidden"
-        >
+        <HeroSubtitle>
           A Tanítanék Mozgalom és a Magyar Kétfarkú Kutyapárt közös európai
           parlamenti képviselőjelöltje
-        </div>
+        </HeroSubtitle>
 
         <ButtonLink class="sm:hidden" href={EXTERNAL_LINK.joinCampaign}>
           Csatlakozz a kampányhoz!
@@ -33,38 +25,9 @@ import IconLink from "@/components/IconLink.astro"
       </div>
     </div>
 
-    <div class="absolute right-14 top-5 flex gap-7 sm:hidden">
-      <IconLink href={EXTERNAL_LINK.facebook} aria-label="Facebook">
-        <IconFacebook class="size-16 xl:size-12" />
-      </IconLink>
-      <IconLink href={EXTERNAL_LINK.tikTok} aria-label="TikTok">
-        <IconTikTok class="size-16 xl:size-12" />
-      </IconLink>
-      <IconLink href={EXTERNAL_LINK.instagram} aria-label="Instagram">
-        <IconInstagram class="size-16 xl:size-12" />
-      </IconLink>
-    </div>
-
-    <div
-      class="absolute bottom-5 right-14 flex gap-6 sm:left-1/2 sm:right-[unset] sm:-translate-x-1/2 sm:flex-row-reverse"
-    >
-      <img
-        src={mkkpEpLogo.src}
-        alt="MKKP Logo"
-        class="size-20 xl:size-16 lg:size-14 sm:size-12"
-      />
-      <IconTanitanek class="size-20 xl:size-16 lg:size-14 sm:size-12" />
-    </div>
-
-    <div class="relative -z-10">
-      <img
-        src={bgHero.src}
-        class="w-full object-cover sm:h-[430px] sm:object-[75%]"
-        style={{ maxHeight: bgHero.height + "px" }}
-        alt=""
-      />
-      <div class="hero-gradient absolute inset-0 w-1/2 sm:w-full"></div>
-    </div>
+    <HeroSocials />
+    <HeroPartyLogos />
+    <HeroBackground />
   </div>
 
   <div

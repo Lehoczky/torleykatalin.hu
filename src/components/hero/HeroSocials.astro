@@ -1,0 +1,19 @@
+---
+import IconFacebook from "@/components/icons/Facebook.astro"
+import IconInstagram from "@/components/icons/Instagram.astro"
+import IconTikTok from "@/components/icons/TikTok.astro"
+import { EXTERNAL_LINK } from "@/constants"
+import IconLink from "@/components/IconLink.astro"
+---
+
+<div class="absolute right-14 top-5 flex gap-7 sm:hidden">
+  <IconLink href={EXTERNAL_LINK.facebook} aria-label="Facebook">
+    <IconFacebook class="size-16 xl:size-12" />
+  </IconLink>
+  <IconLink href={EXTERNAL_LINK.tikTok} aria-label="TikTok">
+    <IconTikTok class="size-16 xl:size-12" />
+  </IconLink>
+  <IconLink href={EXTERNAL_LINK.instagram} aria-label="Instagram">
+    <IconInstagram class="size-16 xl:size-12" />
+  </IconLink>
+</div>

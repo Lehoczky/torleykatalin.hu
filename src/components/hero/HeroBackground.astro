@@ -1,0 +1,13 @@
+---
+import bgHero from "@/images/bg-hero.png"
+---
+
+<div class="relative -z-10">
+  <img
+    src={bgHero.src}
+    class="w-full object-cover sm:h-[430px] sm:object-[75%]"
+    style={{ maxHeight: bgHero.height + "px" }}
+    alt=""
+  />
+  <div class="hero-gradient absolute inset-0 w-1/2 sm:w-full"></div>
+</div>

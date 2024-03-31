@@ -7,9 +7,9 @@ import IconYoutube from "@/components/icons/Youtube.astro"
 import InlineLink from "@/components/InlineLink.astro"
 import SectionTitle from "@/components/SectionTitle.astro"
 import { EMAIL_ADDRESS, EXTERNAL_LINK, SECTION_ID } from "@/constants"
-import bgContact from "@/images/bg-contact.png"
-
+import ContactGrid from "../contact/ContactGrid.astro"
 import ContactPlatform from "../contact/ContactPlatform.astro"
+import ContactBackground from "../contact/ContactBackground.astro"
 ---
 
 <section class="relative py-11 text-white">
@@ -18,7 +18,7 @@ import ContactPlatform from "../contact/ContactPlatform.astro"
       >Contact</SectionTitle
     >
 
-    <ul class="flex justify-between">
+    <ContactGrid>
       <li>
         <ContactPlatform href={EXTERNAL_LINK.facebook}>
           <IconFacebook slot="icon" class="size-24" />
@@ -49,7 +49,7 @@ import ContactPlatform from "../contact/ContactPlatform.astro"
           <span slot="text">Hungarian newsletter</span>
         </ContactPlatform>
       </li>
-    </ul>
+    </ContactGrid>
 
     <div class="text-2xl">
       Press enquiries: <InlineLink href={`mailto:${EMAIL_ADDRESS}`}
@@ -58,9 +58,5 @@ import ContactPlatform from "../contact/ContactPlatform.astro"
     </div>
   </div>
 
-  <img
-    src={bgContact.src}
-    alt=""
-    class="absolute inset-0 -z-10 h-full w-full object-cover"
-  />
+  <ContactBackground />
 </section>
