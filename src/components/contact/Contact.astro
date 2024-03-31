@@ -18,34 +18,34 @@ import ContactPlatform from "./ContactPlatform.astro"
       >Kapcsolat</SectionTitle
     >
 
-    <ul class="flex justify-between">
-      <li>
+    <ul class="flex flex-wrap items-center justify-center gap-y-12">
+      <li class="w-1/5 lg:w-1/3 sm:w-full">
         <ContactPlatform href={EXTERNAL_LINK.facebook}>
-          <IconFacebook slot="icon" class="size-24" />
+          <IconFacebook slot="icon" />
           <span slot="text">Facebook</span>
         </ContactPlatform>
       </li>
-      <li>
+      <li class="w-1/5 lg:w-1/3 sm:w-full">
         <ContactPlatform href={EXTERNAL_LINK.instagram}>
-          <IconInstagram slot="icon" class="size-24" />
+          <IconInstagram slot="icon" />
           <span slot="text">Instagram</span>
         </ContactPlatform>
       </li>
-      <li>
+      <li class="w-1/5 lg:w-1/3 sm:w-full">
         <ContactPlatform href={EXTERNAL_LINK.youtube}>
-          <IconYoutube slot="icon" class="size-24" />
+          <IconYoutube slot="icon" />
           <span slot="text">Youtube</span>
         </ContactPlatform>
       </li>
-      <li>
+      <li class="w-1/5 lg:w-1/3 sm:w-full">
         <ContactPlatform href={EXTERNAL_LINK.tikTok}>
-          <IconTikTok slot="icon" class="size-24" />
+          <IconTikTok slot="icon" />
           <span slot="text">TikTok</span>
         </ContactPlatform>
       </li>
-      <li>
+      <li class="w-1/5 lg:w-1/3 sm:w-full">
         <ContactPlatform href={EXTERNAL_LINK.newsletter}>
-          <IconEmail slot="icon" class="size-24" />
+          <IconEmail slot="icon" />
           <span slot="text">Hírlevél</span>
         </ContactPlatform>
       </li>

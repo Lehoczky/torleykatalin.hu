@@ -9,7 +9,7 @@ export default {
       screens: {
         sm: "640px",
         md: "768px",
-        lg: "1024px",
+        lg: "900px",
         xl: "1152px",
       },
     },
@@ -28,6 +28,13 @@ export default {
         DEFAULT: "#F5F5F5",
         dark: "#665F5F",
       },
+    },
+    screens: {
+      "2xl": { max: "1535px" },
+      xl: { max: "1152px" },
+      lg: { max: "900px" },
+      md: { max: "768px" },
+      sm: { max: "640px" },
     },
     extend: {
       rotate: {

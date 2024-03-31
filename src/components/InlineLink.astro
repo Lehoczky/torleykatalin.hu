@@ -9,7 +9,7 @@ const { class: className, ...attrs } = Astro.props
 ---
 
 <a
-  class={cn("underline-offset-2 hover:underline", className)}
+  class={cn("inline-block underline-offset-2 hover:underline", className)}
   {...anchorAttributes(attrs)}
 >
   <slot />

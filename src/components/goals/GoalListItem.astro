@@ -12,10 +12,15 @@ const { image, heading } = Astro.props
 ---
 
 <li
-  class="group relative flex flex-col items-center gap-8 overflow-hidden bg-secondary px-14 py-20 text-center"
+  class="group relative flex w-[22rem] flex-col items-center justify-between gap-8 overflow-hidden bg-secondary px-14 py-16 text-center md:w-full"
 >
-  <Picture src={image} formats={["avif", "webp"]} alt="" />
-  <div class="text-2xl font-semibold">{heading}</div>
+  <div class="flex flex-col items-center">
+    <Picture class="mb-6" src={image} formats={["avif", "webp"]} alt="" />
+    <div class="text-2xl font-semibold">{heading}</div>
+  </div>
+  <div class="text-primary underline underline-offset-2" aria-hidden="true">
+    Részletek
+  </div>
 
   <div
     class="absolute inset-0 z-10 translate-y-full p-16 text-white opacity-40 transition duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100"

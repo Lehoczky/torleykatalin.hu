@@ -2,14 +2,16 @@
 import Tanitanek from "@/components/icons/Tanitanek.astro"
 import { EMAIL_ADDRESS, EXTERNAL_LINK, SECTION_ID } from "@/constants"
 import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
-
+import EmailOutline from "../icons/EmailOutline.astro"
 import InlineLink from "../InlineLink.astro"
 import { withBase } from "@/utils"
 ---
 
 <footer class="bg-secondary-dark pb-14 pt-8 text-white">
-  <div class="container flex gap-2">
-    <div class="grid flex-1 grid-cols-2 place-content-center">
+  <div class="container flex gap-2 lg:flex-col lg:gap-7">
+    <div
+      class="grid flex-1 grid-cols-2 place-content-center gap-y-2 leading-tight xl:grid-cols-[1fr_2fr] sm:grid-cols-1 sm:gap-4"
+    >
       <div>
         <InlineLink href={withBase("/rolam")}>Rólam</InlineLink>
       </div>
@@ -36,7 +38,9 @@ import { withBase } from "@/utils"
       </div>
     </div>
 
-    <div class="flex flex-col gap-4 border-l border-l-white py-2 pl-7">
+    <div
+      class="flex flex-col gap-4 border-l border-white py-2 pl-7 lg:border-l-0 lg:border-t lg:py-4 lg:pl-0 sm:py-8"
+    >
       <InlineLink
         href={EXTERNAL_LINK.tanitanek}
         class="flex items-center gap-5 text-3xl font-extrabold"
@@ -55,8 +59,9 @@ import { withBase } from "@/utils"
 
       <InlineLink
         href={`mailto:${EMAIL_ADDRESS}`}
-        class="ml-[3.75rem] flex items-center"
+        class="flex items-center gap-5 text-[28px]"
       >
+        <EmailOutline class="size-10" />
         <span>{EMAIL_ADDRESS}</span>
       </InlineLink>
     </div>

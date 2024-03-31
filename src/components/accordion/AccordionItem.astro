@@ -12,16 +12,16 @@ const sectionId = "s" + index
 <div class="text-left odd:bg-secondary">
   <h3>
     <button
-      class="group flex w-full items-center p-6"
+      class="group flex w-full items-center p-6 text-left sm:px-3"
       aria-expanded="false"
       id={buttonId}
       aria-controls={sectionId}
     >
       <div
-        class="relative mr-8 inline-flex size-12 rounded-full border-4 border-black before:absolute before:left-1/2 before:top-1/2 before:h-1 before:w-1/2 before:origin-center before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-black before:transition before:duration-100 after:absolute after:left-1/2 after:top-1/2 after:h-1/2 after:w-1 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:bg-black after:transition after:duration-300 group-aria-expanded:before:opacity-0 group-aria-expanded:after:rotate-[270deg]"
+        class="relative mr-8 inline-flex size-12 shrink-0 rounded-full border-4 border-black before:absolute before:left-1/2 before:top-1/2 before:h-1 before:w-1/2 before:origin-center before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-black before:transition before:duration-100 after:absolute after:left-1/2 after:top-1/2 after:h-1/2 after:w-1 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:bg-black after:transition after:duration-300 group-aria-expanded:before:opacity-0 group-aria-expanded:after:rotate-[270deg] md:mr-4 md:size-10"
       >
       </div>
-      {summary}
+      <div class="font-semibold">{summary}</div>
     </button>
   </h3>
   <section
@@ -30,7 +30,7 @@ const sectionId = "s" + index
     id={sectionId}
     aria-labelledby="b1"
   >
-    <div class="ml-20 overflow-hidden">
+    <div class="ml-20 overflow-hidden md:ml-0">
       <div class="px-6 pb-6">
         <slot />
       </div>

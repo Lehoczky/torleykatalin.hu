@@ -10,12 +10,14 @@ const { class: className, ...attrs } = Astro.props
 
 <a
   class={cn(
-    "grid place-items-center group gap-6 text-center transition duration-200",
+    "grid place-items-center group gap-6 lg:gap-4 sm:gap-8 text-center transition duration-200",
     className
   )}
   {...anchorAttributes(attrs)}
 >
-  <div class="transition duration-200 group-hover:scale-105">
+  <div
+    class="transition duration-200 *:size-24 group-hover:scale-105 sm:*:size-40"
+  >
     <slot name="icon" />
   </div>
   <slot name="text" />

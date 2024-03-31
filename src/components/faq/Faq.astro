@@ -6,22 +6,25 @@ import InlineLink from "../InlineLink.astro"
 import { EXTERNAL_LINK, SECTION_ID } from "@/constants"
 ---
 
-<section class="container py-20 text-center">
-  <SectionTitle id={SECTION_ID.faq} class="mb-12">Gyakori kérdések</SectionTitle
+<section class="container py-20">
+  <SectionTitle id={SECTION_ID.faq} class="mb-12 text-center"
+    >Gyakori kérdések</SectionTitle
   >
 
   <Accordion>
     <AccordionItem index={0} summary="Hogyan lehet támogatni a kampányt?">
       Hogyan lehet támogatni a kampányt? A kampány alapját a magánszemélyek
       adományai adják. Csak így, közösen van esélyünk nyerni! Amennyiben
-      szeretnél adományozni, <InlineLink href={EXTERNAL_LINK.donate}
-        >kattints ide</InlineLink
+      szeretnél adományozni, <InlineLink
+        href={EXTERNAL_LINK.donate}
+        class="text-primary">kattints ide</InlineLink
       >!
     </AccordionItem>
     <AccordionItem index={1} summary="Hogyan csatlakozhatok a kampányhoz?">
       Nagy szükség lesz aktivistákra a kampány során, akik segítenek események
-      szervezésében. <InlineLink href={EXTERNAL_LINK.joinCampaign}
-        >Kattints ide</InlineLink
+      szervezésében. <InlineLink
+        href={EXTERNAL_LINK.joinCampaign}
+        class="text-primary">Kattints ide</InlineLink
       >, ha jelentkeznél önkéntesnek! Akkor is számítunk rád, ha csak online
       tudnál segíteni, ilyen feladatokból is sok van.
     </AccordionItem>

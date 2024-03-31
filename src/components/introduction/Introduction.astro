@@ -8,8 +8,12 @@ import { withBase } from "@/utils"
 ---
 
 <section class="container mb-20 mt-12">
-  <div class="mb-6 flex items-center justify-between">
-    <div class="max-w-[602px] space-y-6 text-justify">
+  <div
+    class="mb-8 flex items-center justify-between gap-20 xl:gap-14 md:flex-col"
+  >
+    <div
+      class="max-w-[602px] space-y-6 text-justify 2xl:max-w-none md:text-left"
+    >
       <p>
         Törley Katalin vagyok, tanár. 23 évig tanítottam, amíg 2022-ben ki nem
         rúgtak a polgári engedetlenségi mozgalomban való részvételem miatt.
@@ -25,12 +29,14 @@ import { withBase } from "@/utils"
       </p>
     </div>
 
-    <div class="shrink-0">
+    <div class="shrink-0 lg:size-64 md:size-max">
       <Picture src={portrait} formats={["avif", "webp"]} alt="" />
     </div>
   </div>
 
-  <ButtonLink href={withBase("/rolam")} target="_self"
-    >Tudj meg többet rólam</ButtonLink
-  >
+  <div class="md:mx-auto md:max-w-80">
+    <ButtonLink class="md:w-full" href={withBase("/rolam")} target="_self"
+      >Tudj meg többet rólam</ButtonLink
+    >
+  </div>
 </section>
