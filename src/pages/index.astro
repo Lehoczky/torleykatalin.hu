@@ -21,11 +21,14 @@ import Footer from "@/components/footer/Footer.astro"
   <Support />
   <Goals />
   <Accomplishments />
-  <div class="container mt-4 flex justify-center">
+  <div class="container mt-4 flex justify-center lg:!max-w-none lg:p-0">
     <Picture
-      class="h-[420px] overflow-hidden rounded-md object-cover xl:rounded-none"
+      class="h-[420px] overflow-hidden rounded-md object-cover xl:rounded-none md:object-[40%]"
+      widths={[768, crowd.width]}
+      sizes={`(max-width: 768px) 768px, ${crowd.width}px`}
       src={crowd}
       formats={["avif", "webp"]}
+      quality={"max"}
       alt="Törley Katalin a Tanítanék mozgalom tüntetésén"
     />
   </div>

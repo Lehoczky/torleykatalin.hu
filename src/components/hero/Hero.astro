@@ -10,53 +10,74 @@ import bgHero from "@/images/bg-hero.png"
 import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
 ---
 
-<section class="relative text-white">
-  <div class="container absolute bottom-24 left-0 right-0 xl:bottom-20">
-    <div class="w-[26rem]">
-      <h1
-        class="mb-12 rotate-hero-text transform text-8xl font-bold uppercase italic xl:mb-10 xl:text-7xl"
-      >
-        Törley Katalin
-      </h1>
+<section>
+  <div class="relative text-white">
+    <div class="container absolute bottom-24 left-0 right-0 xl:bottom-12">
+      <div class="w-[26rem] lg:w-[24rem] sm:w-full sm:text-center">
+        <h1
+          class="mb-12 rotate-hero-text transform text-8xl font-bold uppercase italic xl:mb-10 xl:text-7xl lg:text-4xl"
+        >
+          Törley Katalin
+        </h1>
 
-      <div
-        class="mb-14 rotate-hero-text transform text-2xl font-semibold italic"
-      >
-        A Tanítanék Mozgalom és a Magyar Kétfarkú Kutyapárt közös európai
-        parlamenti képviselőjelöltje
+        <div
+          class="mb-14 rotate-hero-text transform text-2xl font-semibold italic xl:mb-10 lg:text-xl sm:hidden"
+        >
+          A Tanítanék Mozgalom és a Magyar Kétfarkú Kutyapárt közös európai
+          parlamenti képviselőjelöltje
+        </div>
+
+        <ButtonLink class="sm:hidden" href={EXTERNAL_LINK.joinCampaign}>
+          Csatlakozz a kampányhoz!
+        </ButtonLink>
       </div>
+    </div>
 
-      <ButtonLink href={EXTERNAL_LINK.joinCampaign}>
-        Csatlakozz a kampányhoz!
-      </ButtonLink>
+    <div class="absolute right-14 top-5 flex gap-7 sm:hidden">
+      <HeroIconLink href={EXTERNAL_LINK.facebook} aria-label="Facebook">
+        <IconFacebook class="size-16 xl:size-12" />
+      </HeroIconLink>
+      <HeroIconLink href={EXTERNAL_LINK.tikTok} aria-label="TikTok">
+        <IconTikTok class="size-16 xl:size-12" />
+      </HeroIconLink>
+      <HeroIconLink href={EXTERNAL_LINK.instagram} aria-label="Instagram">
+        <IconInstagram class="size-16 xl:size-12" />
+      </HeroIconLink>
+    </div>
+
+    <div
+      class="absolute bottom-5 right-14 flex gap-6 sm:left-1/2 sm:right-[unset] sm:-translate-x-1/2 sm:flex-row-reverse"
+    >
+      <img
+        src={mkkpEpLogo.src}
+        alt="MKKP Logo"
+        class="size-20 xl:size-16 lg:size-14 sm:size-12"
+      />
+      <IconTanitanek class="size-20 xl:size-16 lg:size-14 sm:size-12" />
+    </div>
+
+    <div class="relative -z-10">
+      <img
+        src={bgHero.src}
+        class="w-full object-cover sm:h-[430px] sm:object-[75%]"
+        style={{ maxHeight: bgHero.height + "px" }}
+        alt=""
+      />
+      <div class="hero-gradient absolute inset-0 w-1/2 sm:w-full"></div>
     </div>
   </div>
 
-  <div class="absolute right-14 top-5 flex gap-7">
-    <HeroIconLink href={EXTERNAL_LINK.facebook} aria-label="Facebook">
-      <IconFacebook class="size-16" />
-    </HeroIconLink>
-    <HeroIconLink href={EXTERNAL_LINK.tikTok} aria-label="TikTok">
-      <IconTikTok class="size-16" />
-    </HeroIconLink>
-    <HeroIconLink href={EXTERNAL_LINK.instagram} aria-label="Instagram">
-      <IconInstagram class="size-16" />
-    </HeroIconLink>
-  </div>
+  <div
+    class="container mb-10 mt-6 hidden flex-col items-center text-black sm:flex"
+  >
+    <div class="mb-6 max-w-[30rem] text-center text-2xl font-semibold">
+      A Tanítanék Mozgalom és a Magyar Kétfarkú Kutyapárt közös európai
+      parlamenti képviselőjelöltje
+    </div>
 
-  <div class="absolute bottom-5 right-14 flex gap-6">
-    <img src={mkkpEpLogo.src} alt="MKKP Logo" class="size-20" />
-    <IconTanitanek class="size-20" />
-  </div>
-
-  <div class="relative -z-10">
-    <img
-      src={bgHero.src}
-      class="w-full object-cover"
-      style={{ maxHeight: bgHero.height + "px" }}
-      alt=""
-    />
-    <div class="hero-gradient absolute inset-0 w-1/2"></div>
+    <ButtonLink href={EXTERNAL_LINK.joinCampaign}>
+      Csatlakozz a kampányhoz!
+    </ButtonLink>
   </div>
 </section>
 
@@ -67,10 +88,31 @@ import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
 
   .hero-gradient {
     background: linear-gradient(
-      92.54deg,
-      rgba(0, 0, 0, 0.45) 46.26%,
-      rgba(113, 113, 113, 0.24975) 80.32%,
-      rgba(255, 255, 255, 0) 98.06%
+      92.5deg,
+      rgba(0, 0, 0, 0.45) 46%,
+      rgba(113, 113, 113, 0.24975) 80%,
+      rgba(255, 255, 255, 0) 98%
     );
+  }
+
+  @media screen(md) {
+    .hero-gradient {
+      background: linear-gradient(
+        92.5deg,
+        rgba(0, 0, 0, 0.45) 61%,
+        rgba(113, 113, 113, 0.24975) 93%,
+        rgba(255, 255, 255, 0) 98%
+      );
+    }
+  }
+
+  @media screen(sm) {
+    .hero-gradient {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.45) 10%,
+        rgba(0, 0, 0, 0) 50%
+      );
+    }
   }
 </style>

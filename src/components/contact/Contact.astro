@@ -8,11 +8,12 @@ import InlineLink from "@/components/InlineLink.astro"
 import SectionTitle from "@/components/SectionTitle.astro"
 import { EMAIL_ADDRESS, EXTERNAL_LINK, SECTION_ID } from "@/constants"
 import bgContact from "@/images/bg-contact.png"
+import bgContactSm from "@/images/bg-contact-sm.png"
 
 import ContactPlatform from "./ContactPlatform.astro"
 ---
 
-<section class="relative py-11 text-white">
+<section class="relative isolate bg-primary py-11 text-white">
   <div class="container flex flex-col gap-12 text-center">
     <SectionTitle id={SECTION_ID.contact} color="white" class="mb-12"
       >Kapcsolat</SectionTitle
@@ -61,6 +62,12 @@ import ContactPlatform from "./ContactPlatform.astro"
   <img
     src={bgContact.src}
     alt=""
-    class="absolute inset-0 -z-10 h-full w-full object-cover"
+    class="absolute inset-0 -z-10 h-full w-full object-cover md:hidden"
+  />
+
+  <img
+    src={bgContactSm.src}
+    alt=""
+    class="absolute inset-0 -z-10 hidden h-full w-full object-cover md:block"
   />
 </section>
