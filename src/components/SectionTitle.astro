@@ -11,10 +11,14 @@ const { class: className, color = "primary", ...attrs } = Astro.props
 ---
 
 <h2
-  class={cn("font-bold text-4xl text-center scroll-m-28", className, {
-    "text-primary": color === "primary",
-    "text-white": color === "white",
-  })}
+  class={cn(
+    "font-bold text-4xl text-center scroll-m-28 md:scroll-m-20",
+    className,
+    {
+      "text-primary": color === "primary",
+      "text-white": color === "white",
+    }
+  )}
   {...attrs}
 >
   <slot />

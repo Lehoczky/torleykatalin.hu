@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions"
 import JsonLD from "../components/head/JsonLD.astro"
 import Meta from "../components/head/Meta.astro"
 
@@ -17,7 +16,6 @@ const { lang = "hu" } = Astro.props
     <link rel="sitemap" href="/sitemap-index.xml" />
     <Meta />
     <JsonLD />
-    <ViewTransitions />
   </head>
 
   <body class="mx-auto max-w-[150rem] font-sans text-2xl">

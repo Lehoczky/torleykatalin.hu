@@ -1,13 +1,22 @@
 ---
-import { SECTION_ID } from "@/constants"
+import { EXTERNAL_LINK, SECTION_ID } from "@/constants"
 import { withBase } from "@/utils"
 
 import NavLink from "./NavLink.astro"
+import IconHamburger from "@/components/icons/Hamburger.astro"
+import IconFacebook from "@/components/icons/Facebook.astro"
+import IconTikTok from "@/components/icons/TikTok.astro"
+import IconInstagram from "@/components/icons/Instagram.astro"
+import IconLink from "@/components/IconLink.astro"
+import IconClose from "@/components/icons/Close.astro"
+import bgCard from "@/images/bg-card.png"
 ---
 
-<nav class="sticky -top-px z-40 bg-primary text-white shadow sm:hidden">
+<nav
+  class="sticky -top-px z-40 bg-primary text-white shadow sm:fixed sm:left-0 sm:right-0"
+>
   <ul
-    class="container flex justify-between py-7 text-3xl font-semibold uppercase md:text-2xl"
+    class="container flex justify-between py-7 text-3xl font-semibold uppercase md:text-2xl sm:hidden"
   >
     <li>
       <NavLink href={withBase(`/#${SECTION_ID.support}`)}>Támogass</NavLink>
@@ -16,10 +25,85 @@ import NavLink from "./NavLink.astro"
       <NavLink href={withBase(`/#${SECTION_ID.goals}`)}>Ügyek</NavLink>
     </li>
     <li>
-      <NavLink href={withBase(`/#${SECTION_ID.goals}`)}>Kapcsolat</NavLink>
+      <NavLink href={withBase(`/#${SECTION_ID.contact}`)}>Kapcsolat</NavLink>
     </li>
     <li>
       <NavLink href={withBase("/en")}>English</NavLink>
     </li>
   </ul>
+
+  <div class="hidden items-center justify-between px-5 py-4 sm:flex">
+    <button id="hamburger-btn" aria-label="Open navigation menu">
+      <IconHamburger />
+    </button>
+
+    <div class="flex gap-5">
+      <IconLink href={EXTERNAL_LINK.facebook} aria-label="Facebook">
+        <IconFacebook class="size-7" />
+      </IconLink>
+      <IconLink href={EXTERNAL_LINK.tikTok} aria-label="TikTok">
+        <IconTikTok class="size-7" />
+      </IconLink>
+      <IconLink href={EXTERNAL_LINK.instagram} aria-label="Instagram">
+        <IconInstagram class="size-7" />
+      </IconLink>
+    </div>
+  </div>
 </nav>
+
+<div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-primary text-white">
+  <div class="flex justify-end p-3">
+    <button id="close-btn" aria-label="Close menu">
+      <IconClose class="size-12" />
+    </button>
+  </div>
+  <ul
+    class="mt-16 flex flex-col items-center gap-10 text-4xl font-bold uppercase"
+  >
+    <li>
+      <a href={withBase(`/#${SECTION_ID.support}`)}>Támogass</a>
+    </li>
+    <li>
+      <a href={withBase(`/#${SECTION_ID.goals}`)}>Ügyek</a>
+    </li>
+    <li>
+      <a href={withBase(`/#${SECTION_ID.contact}`)}>Kapcsolat</a>
+    </li>
+    <li>
+      <a href={withBase("/en")}>English</a>
+    </li>
+  </ul>
+
+  <img
+    src={bgCard.src}
+    alt=""
+    class="absolute inset-0 -z-10 h-full w-full object-cover object-right brightness-75"
+  />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sm = window.matchMedia("(max-width: 640px)")
+    const mobileMenu = document.getElementById("mobile-menu")!
+    const hamburgerButton = document.getElementById("hamburger-btn")!
+    const closeButton = document.getElementById("close-btn")!
+    const menuLinks = document.querySelectorAll("#mobile-menu a")
+
+    const openMenu = () => {
+      mobileMenu.classList.remove("hidden")
+      document.body.classList.add("overflow-hidden")
+    }
+
+    const closeMenu = () => {
+      mobileMenu.classList.add("hidden")
+      document.body.classList.remove("overflow-hidden")
+    }
+
+    hamburgerButton.addEventListener("click", openMenu)
+    closeButton.addEventListener("click", closeMenu)
+    for (const link of menuLinks) {
+      link.addEventListener("click", closeMenu)
+    }
+    sm.addEventListener("change", closeMenu)
+  })
+</script>

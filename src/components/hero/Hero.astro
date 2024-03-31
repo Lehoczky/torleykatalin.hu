@@ -4,10 +4,10 @@ import IconFacebook from "@/components/icons/Facebook.astro"
 import IconInstagram from "@/components/icons/Instagram.astro"
 import IconTanitanek from "@/components/icons/Tanitanek.astro"
 import IconTikTok from "@/components/icons/TikTok.astro"
-import HeroIconLink from "./HeroIconLink.astro"
 import { EXTERNAL_LINK } from "@/constants"
 import bgHero from "@/images/bg-hero.png"
 import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
+import IconLink from "@/components/IconLink.astro"
 ---
 
 <section>
@@ -34,15 +34,15 @@ import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
     </div>
 
     <div class="absolute right-14 top-5 flex gap-7 sm:hidden">
-      <HeroIconLink href={EXTERNAL_LINK.facebook} aria-label="Facebook">
+      <IconLink href={EXTERNAL_LINK.facebook} aria-label="Facebook">
         <IconFacebook class="size-16 xl:size-12" />
-      </HeroIconLink>
-      <HeroIconLink href={EXTERNAL_LINK.tikTok} aria-label="TikTok">
+      </IconLink>
+      <IconLink href={EXTERNAL_LINK.tikTok} aria-label="TikTok">
         <IconTikTok class="size-16 xl:size-12" />
-      </HeroIconLink>
-      <HeroIconLink href={EXTERNAL_LINK.instagram} aria-label="Instagram">
+      </IconLink>
+      <IconLink href={EXTERNAL_LINK.instagram} aria-label="Instagram">
         <IconInstagram class="size-16 xl:size-12" />
-      </HeroIconLink>
+      </IconLink>
     </div>
 
     <div
