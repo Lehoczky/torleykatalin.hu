@@ -17,5 +17,6 @@
     "mkkp",
     "tanitanek",
     "tseslint"
-  ]
+  ],
+  "eslint.experimental.useFlatConfig": true
 }
