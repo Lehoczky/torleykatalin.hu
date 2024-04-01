@@ -27,9 +27,11 @@ const { image, heading } = Astro.props
     <div class="text-xl">
       <slot />
     </div>
-    <img
-      src={bgCard.src}
+    <Picture
+      src={bgCard}
       alt=""
+      formats={["avif", "webp"]}
+      quality={"max"}
       class="absolute inset-0 -z-10 h-full w-full object-cover"
     />
   </div>

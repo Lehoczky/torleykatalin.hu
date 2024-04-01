@@ -5,6 +5,7 @@ import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
 import EmailOutline from "../icons/EmailOutline.astro"
 import InlineLink from "../InlineLink.astro"
 import { withBase } from "@/utils"
+import { Picture } from "astro:assets"
 ---
 
 <footer class="bg-secondary-dark pb-14 pt-8 text-white">
@@ -53,7 +54,13 @@ import { withBase } from "@/utils"
         href={EXTERNAL_LINK.mkkp}
         class="flex items-center gap-5 text-[28px] font-semibold"
       >
-        <img src={mkkpEpLogo.src} alt="" width={40} height={40} />
+        <Picture
+          class="size-10"
+          src={mkkpEpLogo}
+          formats={["avif", "webp"]}
+          quality={"max"}
+          alt=""
+        />
         <span class="italic">MAGYAR KÉTFARKÚ KUTYA PÁRT</span>
       </InlineLink>
 

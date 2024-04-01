@@ -1,12 +1,15 @@
 ---
+import { Picture } from "astro:assets"
 import bgHero from "@/images/bg-hero.png"
 ---
 
 <div class="relative -z-10">
-  <img
-    src={bgHero.src}
+  <Picture
+    src={bgHero}
     class="w-full object-cover sm:h-[430px] sm:object-[75%]"
+    formats={["avif", "webp"]}
     style={{ maxHeight: bgHero.height + "px" }}
+    quality={"max"}
     alt=""
   />
   <div class="hero-gradient absolute inset-0 w-1/2 sm:w-full"></div>

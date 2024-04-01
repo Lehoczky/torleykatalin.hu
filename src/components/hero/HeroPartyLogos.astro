@@ -1,15 +1,18 @@
 ---
 import IconTanitanek from "@/components/icons/Tanitanek.astro"
 import mkkpEpLogo from "@/images/mkkp-ep-logo.png"
+import { Picture } from "astro:assets"
 ---
 
 <div
   class="absolute bottom-5 right-14 flex gap-6 sm:left-1/2 sm:right-[unset] sm:-translate-x-1/2 sm:flex-row-reverse"
 >
-  <img
-    src={mkkpEpLogo.src}
+  <Picture
+    src={mkkpEpLogo}
     alt="MKKP Logo"
     class="size-20 xl:size-16 lg:size-14 sm:size-12"
+    formats={["avif", "webp"]}
+    quality={"max"}
   />
   <IconTanitanek class="size-20 xl:size-16 lg:size-14 sm:size-12" />
 </div>

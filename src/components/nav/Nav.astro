@@ -10,6 +10,7 @@ import IconInstagram from "@/components/icons/Instagram.astro"
 import IconLink from "@/components/IconLink.astro"
 import IconClose from "@/components/icons/Close.astro"
 import bgCard from "@/images/bg-card.png"
+import { Picture } from "astro:assets"
 ---
 
 <nav
@@ -74,10 +75,12 @@ import bgCard from "@/images/bg-card.png"
     </li>
   </ul>
 
-  <img
-    src={bgCard.src}
+  <Picture
+    src={bgCard}
     alt=""
-    class="absolute inset-0 -z-10 h-full w-full object-cover object-right brightness-75"
+    formats={["avif", "webp"]}
+    quality={"max"}
+    class="absolute inset-0 -z-10 h-full w-full object-cover object-[85%_0] brightness-75"
   />
 </div>
 

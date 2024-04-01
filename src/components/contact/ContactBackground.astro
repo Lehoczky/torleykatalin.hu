@@ -1,16 +1,21 @@
 ---
+import { Picture } from "astro:assets"
 import bgContact from "@/images/bg-contact.png"
 import bgContactSm from "@/images/bg-contact-sm.png"
 ---
 
-<img
-  src={bgContact.src}
+<Picture
+  src={bgContact}
+  formats={["avif", "webp"]}
+  quality={"max"}
   alt=""
   class="absolute inset-0 -z-10 h-full w-full object-cover md:hidden"
 />
 
-<img
-  src={bgContactSm.src}
+<Picture
+  src={bgContactSm}
+  formats={["avif", "webp"]}
+  quality={"max"}
   alt=""
   class="absolute inset-0 -z-10 hidden h-full w-full object-cover md:block md:object-[0_20%] sm:object-center"
 />
