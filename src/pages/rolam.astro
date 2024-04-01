@@ -14,13 +14,17 @@ import { EXTERNAL_LINK } from "@/constants"
 <SiteLayout>
   <Hero />
   <Nav />
-  <section class="container mb-20 mt-12 flex flex-col gap-20">
-    <div class="mb-6 flex items-center justify-between">
+  <section class="container mb-20 mt-12 flex flex-col gap-20 lg:gap-16">
+    <div
+      class="mb-6 flex items-center justify-between gap-20 xl:gap-14 md:flex-col"
+    >
       <div class="shrink-0">
         <Picture src={portrait} formats={["avif", "webp"]} alt="" />
       </div>
 
-      <div class="max-w-[602px] space-y-6 text-justify">
+      <div
+        class="max-w-[602px] space-y-6 text-justify 2xl:max-w-none md:text-left"
+      >
         <p>
           Törley Katalin vagyok, tanár. 23 évig tanítottam francia nyelvet,
           irodalmat és civilizációt a Kölcsey Gimnázium két tanítási nyelvű
@@ -42,7 +46,7 @@ import { EXTERNAL_LINK } from "@/constants"
 
     <div class="flex justify-center">
       <iframe
-        class="aspect-video w-4/5"
+        class="aspect-video w-4/5 xl:w-full"
         src="https://www.youtube.com/embed/MhCwA4TwERE?si=FM_cHqxikPlM3l0Z"
         title="Törley Katalin bemutatkozó vidója"
         frameborder="0"
