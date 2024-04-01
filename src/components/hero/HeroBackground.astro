@@ -9,9 +9,12 @@ import bgHero from "@/images/bg-hero.png"
     src={bgHero}
     class="w-full object-cover sm:h-[430px] sm:object-[75%]"
     formats={["avif", "webp"]}
+    widths={[640, 768, bgHero.width]}
+    sizes={`(max-width: 640px) 640px, (max-width: 768px) 768px, ${bgHero.width}px`}
     style={{ maxHeight: bgHero.height + "px" }}
     quality={"max"}
     alt=""
+    loading={"eager"}
   />
   <div class="hero-gradient absolute inset-0 w-1/2 sm:w-full"></div>
 </div>
