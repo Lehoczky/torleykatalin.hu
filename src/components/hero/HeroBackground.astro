@@ -18,3 +18,35 @@ import bgHero from "@/images/bg-hero.png"
   />
   <div class="hero-gradient absolute inset-0 w-1/2 sm:w-full"></div>
 </div>
+
+<style>
+  .hero-gradient {
+    background: linear-gradient(
+      92.5deg,
+      rgba(0, 0, 0, 0.45) 46%,
+      rgba(113, 113, 113, 0.24975) 80%,
+      rgba(255, 255, 255, 0) 98%
+    );
+  }
+
+  @media screen(md) {
+    .hero-gradient {
+      background: linear-gradient(
+        92.5deg,
+        rgba(0, 0, 0, 0.45) 61%,
+        rgba(113, 113, 113, 0.24975) 93%,
+        rgba(255, 255, 255, 0) 98%
+      );
+    }
+  }
+
+  @media screen(sm) {
+    .hero-gradient {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.45) 10%,
+        rgba(0, 0, 0, 0) 50%
+      );
+    }
+  }
+</style>
