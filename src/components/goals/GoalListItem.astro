@@ -21,7 +21,7 @@ const { image, heading } = Astro.props
   <button class="text-primary underline underline-offset-2">Részletek</button>
 
   <div
-    class="absolute inset-0 z-10 translate-y-full p-16 text-white opacity-40 transition duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100"
+    class="absolute inset-0 z-10 translate-y-full p-16 text-white opacity-40 transition duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 sm:px-8 sm:py-8"
   >
     <div class="mb-8 text-2xl font-semibold">{heading}</div>
     <div class="text-xl">
@@ -45,3 +45,11 @@ const { image, heading } = Astro.props
     })
   }
 </script>
+
+<style>
+  @media screen(sm) {
+    .goal-card {
+      /* min-height: min(30rem, 80dvh); */
+    }
+  }
+</style>
