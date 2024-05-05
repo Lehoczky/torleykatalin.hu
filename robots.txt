@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.torleykatalin.hu/sitemap-index.xml
+Sitemap: https://lehoczky.github.io/torleykatalin.hu/sitemap-index.xml
