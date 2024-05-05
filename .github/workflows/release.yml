@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - release/**
+
+jobs:
+  ci:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository ⏬
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Set up Node.js 💿
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies 💤
+        run: pnpm install
+
+      - name: Check lint errors 🧹
+        run: pnpm lint
+
+      - name: Build the site 🏗
+        run: pnpm build:prod
+
+      - name: 📂 Upload to server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist
+          server-dir: ./www
+          protocol: ftp
