@@ -24,14 +24,6 @@ pnpm dev
 
 ## Tech Used
 
-<a href="https://vuejs.org/">
-    <img src="https://api.iconify.design/logos:astro.svg" alt="Astro" height="100">
-</a>
-
-<a href="https://www.electronjs.org/">
-    <img src="https://api.iconify.design/logos:tailwindcss.svg" alt="Tailwindcss" height="100">
-</a>
-
-<a href="https://github.com/jsdom/jsdom">
-    <img src="https://api.iconify.design/logos:typescript.svg" alt="TypeScript" height="100">
-</a>
+[![Astro](https://api.iconify.design/logos:astro.svg)](https://astro.build/)
+[![Tailwindcss](https://api.iconify.design/logos:tailwindcss.svg)](https://tailwindcss.com/)
+[![TypeScript](https://api.iconify.design/logos:typescript.svg)](https://www.typescriptlang.org/)
