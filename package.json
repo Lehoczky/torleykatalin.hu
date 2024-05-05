@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "build:prod": "astro check && astro build",
+    "build:gh-page": "cross-env GH_PAGE=true astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "eslint:check": "eslint .",
@@ -29,6 +29,7 @@
     "@lehoczky/prettier-config": "^1.1.6",
     "@types/eslint__js": "^8.42.3",
     "@typescript-eslint/parser": "^7.8.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^1.1.2",
     "eslint-plugin-simple-import-sort": "^12.1.0",
