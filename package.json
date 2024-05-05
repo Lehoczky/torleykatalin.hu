@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build:prod": "astro check && astro build",
-    "build:gh-page": "cross-env GH_PAGE=true astro check && astro build",
+    "build:gh-page": "cross-env GH_PAGE=true astro check && cross-env GH_PAGE=true astro build",
     "preview": "astro preview",
     "astro": "astro",
     "eslint:check": "eslint .",
